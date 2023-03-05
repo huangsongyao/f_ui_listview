@@ -4,13 +4,33 @@ Demonstrates how to use the uilistview plugin.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+FUIListView(
+          header: Container(
+            margin:
+                const EdgeInsets.symmetric(horizontal: 20).copyWith(bottom: 60),
+            height: 500,
+            color: Colors.cyan,
+          ),
+          footer: Container(
+            margin:
+                const EdgeInsets.symmetric(horizontal: 20).copyWith(bottom: 60),
+            height: 500,
+            color: Colors.deepOrange,
+          ),
+          builder: (BuildContext context, dynamic item, int index) {
+            return Container(
+              margin: const EdgeInsets.symmetric(horizontal: 20)
+                  .copyWith(bottom: 40),
+              height: 200,
+              color: Colors.amber,
+              child: Center(
+                child: Text(
+                    'index = ${index.toString()} / text = ${item.toString()}'),
+              ),
+            );
+          },
+          data: const [1, 2, 3, 4, 5, 6],
+        )
+        
+```

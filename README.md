@@ -1,18 +1,36 @@
-# uilistview
+# uilistview_example
 
-A new Flutter plugin project.
+Demonstrates how to use the uilistview plugin.
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` in this directory.
-You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
+```
+FUIListView(
+          header: Container(
+            margin:
+                const EdgeInsets.symmetric(horizontal: 20).copyWith(bottom: 60),
+            height: 500,
+            color: Colors.cyan,
+          ),
+          footer: Container(
+            margin:
+                const EdgeInsets.symmetric(horizontal: 20).copyWith(bottom: 60),
+            height: 500,
+            color: Colors.deepOrange,
+          ),
+          builder: (BuildContext context, dynamic item, int index) {
+            return Container(
+              margin: const EdgeInsets.symmetric(horizontal: 20)
+                  .copyWith(bottom: 40),
+              height: 200,
+              color: Colors.amber,
+              child: Center(
+                child: Text(
+                    'index = ${index.toString()} / text = ${item.toString()}'),
+              ),
+            );
+          },
+          data: const [1, 2, 3, 4, 5, 6],
+        )
+        
+```
