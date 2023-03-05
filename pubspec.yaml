@@ -1,7 +1,7 @@
 name: uilistview
 description: Custom list view of flutter
 version: 0.0.1
-homepage: git@github.com:huangsongyao/f_ui_listview.git
+homepage: https://github.com/huangsongyao/f_ui_listview
 
 environment:
   sdk: '>=2.19.2 <3.0.0'
